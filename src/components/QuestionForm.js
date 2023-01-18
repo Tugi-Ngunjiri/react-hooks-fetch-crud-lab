@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 function QuestionForm(props) {
   const [formData, setFormData] = useState({
-    prompt: "",
-    answer1: "",
-    answer2: "",
-    answer3: "",
-    answer4: "",
+    prompt: "How do u make a cake",
+    answer1: "U cook it",
+    answer2: "U steam it",
+    answer3: "U bake it",
+    answer4: "U Fry it",
     correctIndex: 0,
   });
 
@@ -36,9 +36,9 @@ function QuestionForm(props) {
           />
         </label>
         <label>
-          Answer 1:
+          Answer 1: 
           <input
-            type="text"
+            type="U cook it"
             name="answer1"
             value={formData.answer1}
             onChange={handleChange}
@@ -47,7 +47,7 @@ function QuestionForm(props) {
         <label>
           Answer 2:
           <input
-            type="text"
+            type="U steam it"
             name="answer2"
             value={formData.answer2}
             onChange={handleChange}
@@ -56,7 +56,7 @@ function QuestionForm(props) {
         <label>
           Answer 3:
           <input
-            type="text"
+            type="U bake it"
             name="answer3"
             value={formData.answer3}
             onChange={handleChange}
@@ -65,7 +65,7 @@ function QuestionForm(props) {
         <label>
           Answer 4:
           <input
-            type="text"
+            type="U Fry it"
             name="answer4"
             value={formData.answer4}
             onChange={handleChange}

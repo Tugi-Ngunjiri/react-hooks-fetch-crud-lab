@@ -4,11 +4,12 @@ module.exports = {
     ["@babel/preset-react", { runtime: "automatic" }],
   ],
 };
+
 fetch('http://localhost:3000/questions')
   .then((response) => response.json())
   .then((data) => console.log(data));
 
-  const data = { username: 'example' };
+  const data = { questions: 'example' };
 
 fetch('http://localhost:3000/questions', {
   method: 'POST', // or 'PUT'
@@ -30,8 +31,8 @@ fetch('http://localhost:3000/questions', {
   formData.append('username', 'abc123');
   formData.append('avatar', fileField.files[0]);
   
-  fetch('const formData = new FormData'();
-  const FileField = document.querySelector('input[type="file"]');
+  fetch('const formData = new FormData'()
+  const  FileField = document.querySelector('input[type="file"]');
   
   formData.append('username', 'abc123');
   formData.append('avatar', fileField.files[0]);
@@ -110,3 +111,20 @@ fetch('http://localhost:3000/questions', {
       .then((myBlob) => {
         myImage.src = URL.createObjectURL(myBlob);
       });
+      const content = 'Hello World';
+const MyHeaders = new Headers();
+myHeaders.append('Content-Type', 'text/plain');
+myHeaders.append('Content-Length', content.length.toString());
+myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');
+
+console.log(myHeaders.has('Content-Type')); // true
+console.log(myHeaders.has('Set-Cookie')); // false
+myHeaders.set('Content-Type', 'text/html');
+myHeaders.append('X-Custom-Header', 'AnotherValue');
+
+console.log(myHeaders.get('Content-Length')); // 11
+console.log(myHeaders.get('X-Custom-Header')); // ['ProcessThisImmediately', 'AnotherValue']
+
+myHeaders.delete('X-Custom-Header');
+console.log(myHeaders.get('X-Custom-Header')); // null
+
